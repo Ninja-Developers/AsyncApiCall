@@ -10,7 +10,7 @@ public class CallApi {
         this._URL = url;
     }
 
-    public void Get_data() throws IOException {
+    public String getDataString() throws IOException {
         URL url = new URL(this._URL);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
@@ -22,6 +22,14 @@ public class CallApi {
             content.append(data);
         }
         in.close();
-        System.out.println(content);
+        return String.valueOf(content);
+    }
+
+    public int getStatusCode() throws IOException {
+        URL url = new URL(this._URL);
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+        int status = con.getResponseCode();
+        return status;
     }
 }
