@@ -10,3 +10,4 @@ Fething data from third party api is very
  fetch data from any end point, and will be as 
  easy as possible.  
   
+### I urge you to use intelij ide as this is a gradle project 
