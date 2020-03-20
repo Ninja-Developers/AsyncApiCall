@@ -11,3 +11,23 @@ Fething data from third party api is very
  easy as possible.  
   
 ### I urge you to use intelij ide as this is a gradle project 
+
+
+
+----
+
+# Installation Guide 
+```
+	dependencies {
+	        implementation 'com.github.Souvikns:AsyncApiCall:0.0.1'
+	}
+ ```
+ 
+ ```
+ 	<dependency>
+	    <groupId>com.github.Souvikns</groupId>
+	    <artifactId>AsyncApiCall</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
+ 
+ ```
