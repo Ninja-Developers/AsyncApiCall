@@ -10,11 +10,11 @@ public class CallApi {
         this._URL = url;
     }
 
+    //This functions returns in a the response as a string
     public String getDataString() throws IOException {
         URL url = new URL(this._URL);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
-        int status = con.getResponseCode();
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
         String data;
         StringBuffer content = new StringBuffer();
@@ -25,6 +25,7 @@ public class CallApi {
         return String.valueOf(content);
     }
 
+    //This function return the status code as a Integer
     public int getStatusCode() throws IOException {
         URL url = new URL(this._URL);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
